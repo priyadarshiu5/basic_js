@@ -1,0 +1,45 @@
+// 1. Write a JavaScript program to add two strings and return them with all alphabets in capital.
+function addAndCapitalize(str1, str2) {
+  return (str1 + str2).toUpperCase();
+}
+
+// Example usage:
+console.log("1:", addAndCapitalize("hello", "world")); // Output: "HELLOWORLD"
+
+
+// 2. Write a JavaScript program to convert the length of a given string in bytes.
+function stringByteLength(str) {
+  return new Blob([str]).size;
+}
+
+// Example usage:
+console.log("2:", stringByteLength("Hello")); // Output: 5 (for ASCII text)
+
+
+// 3. Write a JavaScript program to round a number to a specified amount of digits.
+function roundToDigits(num, digits) {
+  const factor = Math.pow(10, digits);
+  return Math.round(num * factor) / factor;
+}
+
+// Example usage:
+console.log("3:", roundToDigits(3.14159265, 3)); // Output: 3.142
+
+
+// 4. Write a JavaScript program to check whether a string is a palindrome or not.
+function isPalindrome(str) {
+  const cleanStr = str.toLowerCase().replace(/[^a-z0-9]/g, "");
+  return cleanStr === cleanStr.split("").reverse().join("");
+}
+
+// Example usage:
+console.log("4:", isPalindrome("Racecar")); // Output: true
+
+
+// 5. Write a JavaScript program to count the number of vowels in a given string.
+function countVowels(str) {
+  return (str.match(/[aeiouAEIOU]/g) || []).length;
+}
+
+// Example usage:
+console.log("5:", countVowels("Space Exploration")); // Output: 7
